@@ -1,6 +1,6 @@
 # ghost_app
 
-A new Flutter application for ghost.
+A new Flutter application.
 
 ## Getting Started
 

@@ -1,5 +1,5 @@
 name: ghost_app
-description: A new Flutter application for ghost.
+description: A new Flutter application.
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -11,7 +11,7 @@ description: A new Flutter application for ghost.
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 1.0.0+beta1
+version: 1.0.0+1
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
@@ -20,12 +20,12 @@ dependencies:
   flutter:
     sdk: flutter
 
-  flutter_html: ^0.11.0
-  url_launcher: 5.2.5
+  flutter_html: ^0.11.1
+  url_launcher: 5.4.1
   intl: 0.16.0
-  share: 0.6.3+1
+  share: 0.6.3+5
   flutter_ghost_content_api: 0.0.3
-  package_info: ^0.4.0+10
+  package_info: 0.4.0+13
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
