@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ghost_content_api/flutter_ghost_content_api.dart';
 import 'package:intl/intl.dart';
+
+import '../utils/ghost_api.dart';
 import '../pages/post.dart';
 import '../widgets/drawer.dart';
 
@@ -67,6 +68,7 @@ class _FeedPageState extends State<FeedPage> {
       }
 
       PostsResponse response = await client.getPosts(includes: _includes, page: _page, limit: _limit, filters: _filters);
+
       setState(() {
         if (!_initialLoad) {
           _maxPosts = response.meta.pagination.total;
@@ -234,7 +236,7 @@ class _FeedPageState extends State<FeedPage> {
         controller: _controller,
         slivers: <Widget>[
           SliverAppBar(
-            expandedHeight: 150.0,
+            expandedHeight: 250.0,
             floating: false,
             pinned: true,
             actions: <Widget>[

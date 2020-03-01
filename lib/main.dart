@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ghost_content_api/flutter_ghost_content_api.dart';
+
+import './utils/ghost_api.dart';
 import './pages/about.dart';
 import './pages/feed.dart';
 
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
 
     return GhostContentAPIProvider(
       client: GhostContentAPIClient(
-        version: 'v2',
+        version: 'v3',
         url: 'https://iiong.com',
         contentAPIKey: '99efee9603c92e5cd04501f069',
       ),
