@@ -1,6 +1,6 @@
 # ghost_app
 
-A new Flutter application.
+A new Ghost Blog Flutter application.
 
 ## Getting Started
 
