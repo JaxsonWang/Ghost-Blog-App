@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_html/flutter_html.dart';
+import 'package:flutter_html/style.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:share/share.dart';
-import 'package:html/dom.dart' as dom;
 
 import '../utils/ghost_api.dart';
 
@@ -70,22 +70,11 @@ class Post extends StatelessWidget {
           children: <Widget>[
             Html(
               data: post.html,
-              padding: EdgeInsets.all(16.0),
-              backgroundColor: Colors.white70,
-              defaultTextStyle: TextStyle(height: 1.25, fontFamily: 'inherit'),
-              linkStyle: const TextStyle(
-                color: Colors.teal,
-              ),
-              useRichText: false,
-              customRender: (node, children) {
-                var render;
-                if (node is dom.Element) {
-                  switch (node.localName) {
-                    case 'figure':
-                      render = new Text('');
-                  }
-                }
-                return render;
+              style: {
+                "html": Style(
+                  backgroundColor: Colors.white70,
+                  padding: EdgeInsets.all(16.0),
+                )
               },
               onLinkTap: (url) async {
                 if (await canLaunch(url)) {
