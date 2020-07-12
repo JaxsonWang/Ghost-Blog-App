@@ -9,7 +9,6 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     return GhostContentAPIProvider(
       client: GhostContentAPIClient(
         version: 'v3',
@@ -23,7 +22,9 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.teal,
         ),
+        initialRoute: '/',
         routes: <String, WidgetBuilder>{
+          // FeedPage.route: (context) => new FeedPage(),
           AboutPage.route: (context) => new AboutPage()
         },
       ),
